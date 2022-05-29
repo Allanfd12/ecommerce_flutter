@@ -1,6 +1,6 @@
 # ecommerce_app
-
-testes de arquitetura e integração web
+Este projeto foi criado com a intenção de realizar testes de arquitetura e integração web.
+quando terminado, deverá se integrar como um consumidor da api do ecommerce em Laravel, replicando em forma de app, as plincipais funcionalidade do sistema web
 
 ## Getting Started
 
