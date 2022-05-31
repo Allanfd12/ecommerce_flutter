@@ -1,0 +1,2 @@
+const String laravelEspectedResponse =
+    '{"data":[{"id":1,"name":"et hic","slug":"et-hic"},{"id":2,"name":"ullam alias","slug":"ullam-alias"},{"id":3,"name":"repudiandae nisi","slug":"repudiandae-nisi"},{"id":4,"name":"soluta corporis","slug":"soluta-corporis"},{"id":5,"name":"aliquid labore","slug":"aliquid-labore"},{"id":6,"name":"saepe voluptas","slug":"saepe-voluptas"},{"id":7,"name":"libero quasi","slug":"libero-quasi"}]}';

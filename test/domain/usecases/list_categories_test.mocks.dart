@@ -35,9 +35,9 @@ class MockCategoryRepositoryMock extends _i1.Mock
   @override
   _i4.Future<_i2.Either<_i5.FailureCategory, List<_i6.Category>>>
       getCategotyList() => (super.noSuchMethod(
-              Invocation.method(#getCategotyList, []),
-              returnValue:
-                  Future<_i2.Either<_i5.FailureCategory, List<_i6.Category>>>.value(
-                      _FakeEither_0<_i5.FailureCategory, List<_i6.Category>>()))
-          as _i4.Future<_i2.Either<_i5.FailureCategory, List<_i6.Category>>>);
+          Invocation.method(#getCategotyList, []),
+          returnValue: Future<
+                  _i2.Either<_i5.FailureCategory, List<_i6.Category>>>.value(
+              _FakeEither_0<_i5.FailureCategory, List<_i6.Category>>())) as _i4
+          .Future<_i2.Either<_i5.FailureCategory, List<_i6.Category>>>);
 }

@@ -27,5 +27,7 @@ class CategoryModel extends Category {
 
   String toJson() => json.encode(toMap());
 
-  static CategoryModel fromJson(String source) => fromMap(json.decode(source));
+  static CategoryModel fromJson(String source) {
+    return fromMap(json.decode(source));
+  }
 }

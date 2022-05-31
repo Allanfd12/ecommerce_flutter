@@ -12,6 +12,7 @@ import 'category_repository_imp_test.mocks.dart';
 
 class CategoryDatasourceMock extends Mock implements CategoryDatasource {}
 
+//flutter pub run  build_runner build --delete-conflicting-outputs
 @GenerateMocks([CategoryDatasourceMock])
 main() {
   final datasouce = MockCategoryDatasourceMock();
