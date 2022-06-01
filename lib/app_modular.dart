@@ -4,6 +4,7 @@ import 'package:ecommerce_app/domain/usecases/list_categories.dart';
 import 'package:ecommerce_app/external/datasources/laravel_category_datasource.dart';
 import 'package:ecommerce_app/infra/datasources/category_datasource.dart';
 import 'package:ecommerce_app/infra/repositories/category_repository_imp.dart';
+import 'package:ecommerce_app/presenter/category/list_category_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class AppModule extends Module {
@@ -16,5 +17,10 @@ class AppModule extends Module {
       ];
 
   @override
-  List<ModularRoute> get routes => [];
+  List<ModularRoute> get routes => [
+        ChildRoute(
+          '/',
+          child: (_, __) => const ListCategoryPage(),
+        )
+      ];
 }
