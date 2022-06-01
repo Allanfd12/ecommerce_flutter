@@ -39,6 +39,7 @@ dependencies:
   flutter_modular: ^5.0.2
   modular_test: ^2.0.0
   bloc: ^8.0.3
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   mockito:
