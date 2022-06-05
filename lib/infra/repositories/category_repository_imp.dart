@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/domain/entities/category.dart';
 import 'package:ecommerce_app/domain/errors/failure_category.dart';
 import 'package:ecommerce_app/external/abstract_datasources/category_datasource.dart';
-import 'package:ecommerce_app/infra/abstarct_repositories/category_repository.dart';
+import 'package:ecommerce_app/infra/abstract_repositories/category_repository.dart';
 
 class CategoriesRepositoryImp implements CategoryRepository {
   final CategoryDatasource datasource;

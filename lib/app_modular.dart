@@ -3,7 +3,7 @@ import 'package:ecommerce_app/domain/abstract_usecases/list_categories.dart';
 import 'package:ecommerce_app/domain/usecases/list_categories_imp.dart';
 import 'package:ecommerce_app/external/abstract_datasources/category_datasource.dart';
 import 'package:ecommerce_app/external/datasources/laravel_category_datasource.dart';
-import 'package:ecommerce_app/infra/abstarct_repositories/category_repository.dart';
+import 'package:ecommerce_app/infra/abstract_repositories/category_repository.dart';
 import 'package:ecommerce_app/infra/repositories/category_repository_imp.dart';
 import 'package:ecommerce_app/presenter/category/list_category_bloc.dart';
 import 'package:ecommerce_app/presenter/category/list_category_page.dart';
