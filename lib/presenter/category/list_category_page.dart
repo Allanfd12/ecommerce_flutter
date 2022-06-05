@@ -30,16 +30,18 @@ class _ListCategoryPageState extends State<ListCategoryPage> {
                   AsyncSnapshot<ListCategoryState> snapshot) {
                 final state = listCategoryBloc.state;
                 if (state is ListStart) {
-                  return Center(child: Text("Inicio"));
+                  return const Center(child: Text("Inicio"));
                 }
                 if (state is ListLoading) {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
                 if (state is ListError) {
-                  return Center(child: Text("erro"));
+                  String erroPadrao = "Tivemos um problema";
+                  String erro = state.erro.message ?? erroPadrao;
+                  return Center(child: Text(erro));
                 }
                 if (state is ListSuccess) {
-                  final list = (state as ListSuccess).list;
+                  final list = state.list;
                   return Center(
                       child: ListView.builder(
                           itemCount: list.length,
@@ -52,7 +54,7 @@ class _ListCategoryPageState extends State<ListCategoryPage> {
                           }));
                 }
 
-                return Text("Item ");
+                return const Text("Item ");
               },
             ),
           )
@@ -63,6 +65,7 @@ class _ListCategoryPageState extends State<ListCategoryPage> {
 
   @override
   void dispose() {
+    super.dispose();
     listCategoryBloc.close();
   }
 }

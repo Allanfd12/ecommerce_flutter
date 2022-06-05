@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/domain/entities/category.dart';
 import 'package:ecommerce_app/domain/errors/failure_category.dart';
-import 'package:ecommerce_app/infra/datasources/category_datasource.dart';
-import 'package:ecommerce_app/infra/model/category_model.dart';
+import 'package:ecommerce_app/external/abstract_datasources/category_datasource.dart';
+import 'package:ecommerce_app/external/model/category_model.dart';
 import 'package:ecommerce_app/infra/repositories/category_repository_imp.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
@@ -20,7 +20,7 @@ main() {
   test('repository deve retornar uma List<Category>', () async {
     when(datasouce.listCategory()).thenAnswer((_) async => <CategoryModel>[]);
 
-    final result = await repository.getCategotyList();
+    final result = await repository.getCategoryList();
 
     expect(result.fold(id, id), isA<List<Category>>());
   });
@@ -29,7 +29,7 @@ main() {
       () async {
     when(datasouce.listCategory()).thenThrow(Exception());
 
-    final result = await repository.getCategotyList();
+    final result = await repository.getCategoryList();
 
     expect(result.fold(id, id), isA<DatasourceError>());
   });
@@ -39,7 +39,7 @@ main() {
     final DatasourceError erro = new DatasourceError();
     when(datasouce.listCategory()).thenThrow(erro);
 
-    final result = await repository.getCategotyList();
+    final result = await repository.getCategoryList();
 
     expect(result.fold(id, id), erro);
   });

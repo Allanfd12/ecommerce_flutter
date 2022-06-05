@@ -1,7 +1,12 @@
-abstract class FailureCategory implements Exception {}
+abstract class FailureCategory implements Exception {
+  final String? message;
+
+  FailureCategory(this.message);
+}
 
 class DatasourceError implements FailureCategory {
-  final String? menssage;
+  @override
+  String? message;
 
-  DatasourceError({this.menssage});
+  DatasourceError({this.message});
 }

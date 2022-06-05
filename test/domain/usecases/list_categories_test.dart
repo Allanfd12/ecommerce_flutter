@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/domain/entities/category.dart';
-import 'package:ecommerce_app/domain/repositories/category_repository.dart';
-import 'package:ecommerce_app/domain/usecases/list_categories.dart';
+import 'package:ecommerce_app/domain/usecases/list_categories_imp.dart';
+import 'package:ecommerce_app/infra/abstarct_repositories/category_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';

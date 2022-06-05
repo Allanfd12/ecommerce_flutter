@@ -1,11 +1,8 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/domain/abstract_usecases/list_categories.dart';
 import 'package:ecommerce_app/domain/entities/category.dart';
 import 'package:ecommerce_app/domain/errors/failure_category.dart';
-import 'package:ecommerce_app/domain/repositories/category_repository.dart';
-
-abstract class ListCategories {
-  Future<Either<FailureCategory, List<Category>>> call();
-}
+import 'package:ecommerce_app/infra/abstarct_repositories/category_repository.dart';
 
 class ListCategoriesImp implements ListCategories {
   final CategoryRepository repository;
@@ -14,6 +11,6 @@ class ListCategoriesImp implements ListCategories {
 
   @override
   Future<Either<FailureCategory, List<Category>>> call() {
-    return repository.getCategotyList();
+    return repository.getCategoryList();
   }
 }

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/domain/abstract_usecases/list_categories.dart';
 import 'package:ecommerce_app/domain/entities/category.dart';
 import 'package:ecommerce_app/domain/errors/failure_category.dart';
-import 'package:ecommerce_app/domain/usecases/list_categories.dart';
 import 'package:ecommerce_app/presenter/category/events/list_category_event.dart';
 import 'package:ecommerce_app/presenter/category/list_category_bloc.dart';
 import 'package:ecommerce_app/presenter/category/states/list_category_state.dart';
